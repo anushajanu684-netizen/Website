@@ -15,20 +15,36 @@ header p{font-size:0.95rem;color:#34d399;font-weight:700;text-transform:uppercas
 .hero{background:linear-gradient(145deg, #111827, #1f2937);border-radius:16px;padding:2rem 1.25rem;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.4);margin-bottom:1.5rem;border:1px solid #374151;}
 .hero h2{font-size:1.45rem;color:#ffffff;margin-bottom:0.75rem;font-weight:700;}
 .hero p{font-size:0.95rem;color:#9ca3af;margin-bottom:1.5rem;}
-.btn-whatsapp{display:block;background:linear-gradient(135deg, #25d366, #128c7e);color:#fff;text-decoration:none;padding:0.9rem;border-radius:12px;font-weight:700;font-size:1rem;text-align:center;margin-bottom:0.85rem;box-shadow:0 4px 15px rgba(37,211,102,0.3);transition:transform 0.2s;}
-.btn-call{display:block;background:linear-gradient(135deg, #2563eb, #1d4ed8);color:#fff;text-decoration:none;padding:0.9rem;border-radius:12px;font-weight:700;font-size:1rem;text-align:center;box-shadow:0 4px 15px rgba(37,99,235,0.3);transition:transform 0.2s;}
+.btn-whatsapp{display:block;background:linear-gradient(135deg, #25d366, #128c7e);color:#fff;text-decoration:none;padding:0.9rem;border-radius:12px;font-weight:700;font-size:1rem;text-align:center;margin-bottom:0.85rem;box-shadow:0 4px 15px rgba(37,211,102,0.3);}
+.btn-call{display:block;background:linear-gradient(135deg, #2563eb, #1d4ed8);color:#fff;text-decoration:none;padding:0.9rem;border-radius:12px;font-weight:700;font-size:1rem;text-align:center;box-shadow:0 4px 15px rgba(37,99,235,0.3);}
 .section-title{font-size:1.2rem;font-weight:800;color:#38bdf8;margin:1.75rem 0 1rem 0;letter-spacing:0.5px;}
-.card{background:#111827;border-radius:14px;margin-bottom:1.25rem;box-shadow:0 8px 20px rgba(0,0,0,0.3);border:1px solid #374151;overflow:hidden;display:flex;align-items:center;}
+.card{background:#111827;border-radius:14px;margin-bottom:1.25rem;box-shadow:0 8px 20px rgba(0,0,0,0.3);border:1px solid #374151;overflow:hidden;cursor:pointer;transition:border-color 0.2s;}
+.card:hover{border-color:#38bdf8;}
+.card-main{display:flex;align-items:center;}
 .card-icon{background:#1f2937;padding:1.5rem;font-size:2.2rem;display:flex;align-items:center;justify-content:center;border-right:1px solid #374151;min-width:90px;}
 .card-content{padding:1.25rem;flex-grow:1;}
-.card-content h3{font-size:1.1rem;color:#ffffff;margin-bottom:0.35rem;font-weight:700;}
+.card-content h3{font-size:1.1rem;color:#ffffff;margin-bottom:0.35rem;font-weight:700;display:flex;justify-content:space-between;align-items:center;}
+.card-content h3 span{font-size:0.8rem;color:#38bdf8;font-weight:normal;}
 .card-content p{font-size:0.85rem;color:#9ca3af;}
-.contact-box{background:linear-gradient(145deg, #0f172a, #1e293b);color:#fff;border-radius:16px;padding:1.75rem;margin-top:2rem;box-shadow:0 10px 30px rgba(0,0,0,0.5);border:1px solid #3b82f6;}
-.contact-box h3{color:#38bdf8;font-size:1.2rem;margin-bottom:1rem;font-weight:700;}
-.contact-box p{font-size:0.95rem;margin-bottom:0.65rem;color:#e2e8f0;}
-.contact-box a{color:#34d399;text-decoration:none;font-weight:600;}
-footer{text-align:center;padding:2rem 1rem;font-size:0.8rem;color:#64748b;margin-top:1.5rem;border-top:1px solid #1e293b;}
+.card-details{display:none;padding:0 1.25rem 1.25rem 1.25rem;font-size:0.85rem;color:#cbd5e1;border-top:1px dashed #374151;margin-top:0.5rem;padding-top:0.75rem;}
+.card-details ul{padding-left:1.2rem;margin-top:0.5rem;}
+.card-details li{margin-bottom:0.3rem;}
+.contact-section{margin-top:2.5rem;padding:1.5rem 0;border-top:1px solid #1e293b;text-align:left;}
+.contact-section h3{color:#38bdf8;font-size:1.2rem;margin-bottom:1rem;font-weight:700;}
+.contact-section p{font-size:0.95rem;margin-bottom:0.75rem;color:#e2e8f0;}
+.contact-section a{color:#34d399;text-decoration:none;font-weight:600;}
+footer{text-align:center;padding:1.5rem 1rem;font-size:0.8rem;color:#64748b;border-top:1px solid #1e293b;}
 </style>
+<script>
+function toggleCard(id) {
+  var details = document.getElementById(id);
+  if (details.style.display === "block") {
+    details.style.display = "none";
+  } else {
+    details.style.display = "block";
+  }
+}
+</script>
 </head>
 <body>
 
@@ -36,53 +52,86 @@ footer{text-align:center;padding:2rem 1rem;font-size:0.8rem;color:#64748b;margin
 
 <header>
 <h1>AllPro Technical & Cleaning</h1>
-<p>Expert Home Maintenance & Restoration</p>
+<p>Acid Washing & Tile Cleaning Experts</p>
 </header>
 
 <div class="container">
   
   <div class="hero">
-    <h2>Professional Deep Cleaning & Technical Care</h2>
-    <p>High-tech solutions for restoring dirty tiles, hard-water stain removal, professional plumbing, and electrical setups.</p>
+    <h2>Professional Deep Cleaning & Home Care</h2>
+    <p>Specialized in restoring dirty tiles, hard-water stain removal, plumbing, and electrical repairs.</p>
     <a href="https://wa.me/919036696567?text=Hi,%20I%20want%20a%20quote%20for%20Acid%20Washing%20and%20Tile%20Cleaning." class="btn-whatsapp">💬 Chat on WhatsApp</a>
     <a href="tel:+919036696567" class="btn-call">📞 Call: +91 90366 96567</a>
   </div>
 
-  <div class="section-title">🚀 Our Core Services</div>
+  <div class="section-title">🚀 Our Core Services (Click to View Details)</div>
 
   <!-- Service 1 -->
-  <div class="card">
-    <div class="card-icon">🧹</div>
-    <div class="card-content">
-      <h3>Acid Washing & Tile Cleaning</h3>
-      <p>Expert deep cleaning for tough bathroom scale, hard-water stains, floor tile scrubbing, and grout whitening.</p>
+  <div class="card" onclick="toggleCard('details-1')">
+    <div class="card-main">
+      <div class="card-icon">🧹</div>
+      <div class="card-content">
+        <h3>Acid Washing & Tile Cleaning (Speciality) <span>Tap to expand ▼</span></h3>
+        <p>Complete removal of tough bathroom scale, hard-water stains, floor tile scrubbing, and grout whitening.</p>
+      </div>
+    </div>
+    <div id="details-1" class="card-details">
+      <p><strong>Service Highlights:</strong></p>
+      <ul>
+        <li>Deep removal of stubborn yellow hard-water stains on bathroom floors and walls.</li>
+        <li>Specialized acid wash treatment to restore original tile brightness.</li>
+        <li>Grout line cleaning and stain neutralization.</li>
+        <li>Safe chemical handling ensuring no damage to fixtures.</li>
+      </ul>
     </div>
   </div>
 
   <!-- Service 2 -->
-  <div class="card">
-    <div class="card-icon">👨‍🔧</div>
-    <div class="card-content">
-      <h3>Plumbing Services</h3>
-      <p>Professional fix for leaks, tap installations, pipe repairs, and comprehensive bathroom fittings.</p>
+  <div class="card" onclick="toggleCard('details-2')">
+    <div class="card-main">
+      <div class="card-icon">👨‍🔧</div>
+      <div class="card-content">
+        <h3>Plumbing Services <span>Tap to expand ▼</span></h3>
+        <p>Leak fixes, tap installations, pipe repairs, and comprehensive bathroom fittings.</p>
+      </div>
+    </div>
+    <div id="details-2" class="card-details">
+      <p><strong>Service Highlights:</strong></p>
+      <ul>
+        <li>Leakage detection and pipeline repairs.</li>
+        <li>Installation and replacement of taps, showers, and mixers.</li>
+        <li>Bathroom sanitary ware and basin fittings.</li>
+        <li>Blockage clearing for drainage and washbasins.</li>
+      </ul>
     </div>
   </div>
 
   <!-- Service 3 -->
-  <div class="card">
-    <div class="card-icon">⚡</div>
-    <div class="card-content">
-      <h3>Electrical Work</h3>
-      <p>Skilled technician for wiring, switch replacements, appliance setup, and short-circuit troubleshooting.</p>
+  <div class="card" onclick="toggleCard('details-3')">
+    <div class="card-main">
+      <div class="card-icon">⚡</div>
+      <div class="card-content">
+        <h3>Electrical Work <span>Tap to expand ▼</span></h3>
+        <p>Wiring, switch replacements, appliance setup, and short-circuit troubleshooting.</p>
+      </div>
+    </div>
+    <div id="details-3" class="card-details">
+      <p><strong>Service Highlights:</strong></p>
+      <ul>
+        <li>Switchboard installation, repair, and wiring adjustments.</li>
+        <li>Ceiling fan, light fixture, and appliance mounting.</li>
+        <li>Circuit breaker checks and short-circuit diagnostics.</li>
+        <li>Safe, standard-compliant troubleshooting.</li>
+      </ul>
     </div>
   </div>
 
-  <!-- Rich Navy Blue Contact Section -->
-  <div class="contact-box">
+  <!-- Contact Section (Out in the open, no box) -->
+  <div class="contact-section">
     <h3>📞 Contact & Support</h3>
     <p><strong>Primary Phone:</strong> <a href="tel:+919036696567">+91 90366 96567</a></p>
     <p><strong>Secondary Phone:</strong> <a href="tel:+918971012296">+91 89710 12296</a></p>
-    <p style="word-break:break-all; margin-top:0.85rem;"><strong>Email:</strong> allprotechnicleandcleaning@gmail.com</p>
+    <p style="word-break:break-all; margin-top:0.75rem;"><strong>Email:</strong> allprotechnicleandcleaning@gmail.com</p>
   </div>
 
 </div>
